@@ -132,11 +132,12 @@ public class StatisticsActivity extends AppCompatActivity {
         Display display = getWindowManager().getDefaultDisplay();
         int height = display.getHeight();  // deprecated
 
-        int offset = (int)(height * 0.65); /* percent to move */
-
+        //int offset = (int)(height * 0.65); /* percent to move */
+        int offset = (int)(height * 0.25);
         RelativeLayout.LayoutParams rlParams =
                 (RelativeLayout.LayoutParams)chart.getLayoutParams();
-        rlParams.setMargins(0, 0, 0, -offset);
+
+        rlParams.setMargins(0, -offset, 0, 0);
         chart.setLayoutParams(rlParams);
 
 
@@ -145,33 +146,34 @@ public class StatisticsActivity extends AppCompatActivity {
         chart.getDescription().setEnabled(false);
 
        // mChart.setCenterTextTypeface(mTfLight);
-       // chart.setCenterText(generateCenterSpannableText());
+        //chart.setCenterText(generateCenterSpannableText());
 
-        chart.setDrawHoleEnabled(true);
-        chart.setHoleColor(Color.WHITE);
+        //chart.setDrawHoleEnabled(true);
+        //chart.setHoleColor(Color.WHITE);
 
-        chart.setTransparentCircleColor(Color.WHITE);
-        chart.setTransparentCircleAlpha(110);
+        //chart.setTransparentCircleColor(Color.WHITE);
+        //chart.setTransparentCircleAlpha(110);
 
-        chart.setHoleRadius(58f);
-        chart.setTransparentCircleRadius(61f);
+        //chart.setHoleRadius(58f);
+        //chart.setTransparentCircleRadius(61f);
 
-        chart.setDrawCenterText(true);
+        //chart.setDrawCenterText(true);
 
         chart.setRotationEnabled(false);
         chart.setHighlightPerTapEnabled(true);
 
         chart.setMaxAngle(180f); // HALF CHART
-        chart.setRotationAngle(180f);
-        chart.setCenterTextOffset(0, -20);
+        chart.setRotationAngle(360f);
+
+       // chart.setCenterTextOffset(0, -20);
 
 
         chart.setUsePercentValues(true);
         data.setValueFormatter(new PercentFormatter());
 
 
-       // chart.getLegend().setEnabled(false);
-      //  chart.getDescription().setEnabled(false);
+        chart.getLegend().setEnabled(false);
+        chart.getDescription().setEnabled(false);
 
         //chart.setDrawHoleEnabled(true);
         // chart.setHoleColorTransparent(true);
@@ -365,6 +367,7 @@ public class StatisticsActivity extends AppCompatActivity {
         xAxis.setTextColor(Color.LTGRAY);
         xAxis.setTextSize(13f);
         xAxis.setAxisMaximum(6);
+
         xAxis.setLabelCount(5);
       //  xAxis.setCenterAxisLabels(true);
         xAxis.setGranularity(1f);
@@ -377,6 +380,9 @@ public class StatisticsActivity extends AppCompatActivity {
         left.setDrawGridLines(false);
         left.setDrawZeroLine(true); // draw a zero line
         left.setZeroLineColor(Color.GRAY);
+        //left.isDrawZeroLineEnabled();
+
+        left.setDrawZeroLine(true);
         left.setZeroLineWidth(0.7f);
         mChart.getAxisRight().setEnabled(false);
         mChart.getLegend().setEnabled(false);

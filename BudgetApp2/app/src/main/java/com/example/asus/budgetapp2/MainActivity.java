@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity
             ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},MEMORY_ACCESS);
         }
 
-        getData();
+//        getData();
 
-       // addDataToList();
+        addDataToList();
 
         addExpense();
 
@@ -341,7 +341,7 @@ public class MainActivity extends AppCompatActivity
         Month month3 = new Month(4, 2018, 0);
         Month month4 = new Month(5, 2018, 0);
         Month month5 = new Month(6, 2018, 0);
-        monthArrayList.add(month3);
+      /*  monthArrayList.add(month3);
         monthArrayList.add(month4);
         monthArrayList.add(month5);
         monthArrayList.add(month3);
@@ -352,7 +352,7 @@ public class MainActivity extends AppCompatActivity
         monthArrayList.add(month5);
         monthArrayList.add(month3);
         monthArrayList.add(month4);
-        monthArrayList.add(month5);
+        monthArrayList.add(month5);*/
     }
 
     private void setPieChart() {

@@ -14,8 +14,7 @@
             android:title="Change Month" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:icon="@drawable/ic_menu_slideshow" />
         <item
             android:id="@+id/nav_currency"
             android:icon="@drawable/ic_menu_manage"
