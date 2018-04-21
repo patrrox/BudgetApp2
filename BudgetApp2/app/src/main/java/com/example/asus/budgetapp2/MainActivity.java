@@ -77,8 +77,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         //showIntro(SPLASH_TIME_OUT_INTRO);
 
-                Intent intent = new Intent(MainActivity.this,IntroActivity.class);
-                startActivity(intent);
+               // Intent intent = new Intent(MainActivity.this,IntroActivity.class);
+               // startActivity(intent);
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
