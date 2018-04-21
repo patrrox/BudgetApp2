@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.budgetapp2.StatisticsActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" >
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+
+                    >
+
+                </com.github.mikephil.charting.charts.PieChart>
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                android:focusableInTouchMode="true"
+                card_view:cardCornerRadius="4dp"
+                >
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="244dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Avarage (last year)"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ExpensesCard"
+                        android:layout_width="87dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="80dp"
+
+                        android:layout_marginTop="16dp"
+                        android:text="Expenses"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+                    <TextView
+                        android:id="@+id/incomesCard"
+                        android:layout_width="87dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="16dp"
+
+                        android:text="Incomes"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/ExpensesCard" />
+
+
+                    <TextView
+                        android:id="@+id/balanceCard"
+                        android:layout_width="87dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Balance"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/incomesCard" />
+
+
+                    <TextView
+                        android:id="@+id/ExpensesAvarage"
+                        android:layout_width="112dp"
+                        android:layout_height="26dp"
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginTop="16dp"
+                        android:text="-1235.23"
+                        android:textAlignment="center"
+                        android:textColor="#8e0000"
+                        android:textSize="18sp"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+                    <TextView
+                        android:id="@+id/IncomesAvarage"
+                        android:layout_width="112dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginTop="16dp"
+                        android:text="32423.43"
+                        android:textAlignment="center"
+                        android:textColor="#1b5e20"
+                        android:textSize="18sp"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/ExpensesAvarage" />
+
+                    <TextView
+                        android:id="@+id/balanceAvarage"
+                        android:layout_width="113dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="80dp"
+                        android:layout_marginTop="16dp"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/IncomesAvarage" />
+
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/expensesBarChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
