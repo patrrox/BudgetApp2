@@ -1,8 +1,6 @@
 # BudgetApp2
 BudgetApp2 aplikacja do zarządzania budżetem napisana na telefony z androidem, dzięki temu projektowi nauczyłem się:
 
-
-Poznałem cykle 
 ```
 projektować aplikacje na urządzenia mobilne.
 poznałem cykle życia aplikacji
